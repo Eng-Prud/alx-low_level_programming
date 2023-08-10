@@ -2,7 +2,7 @@
 /**
  *main-Entry level
  *printf-output sizes of various types in computer
- *Return: Displays 0 (Success)
+ *Return: Displays 0 (SUCCESS)
  */
 int main(void)
 {
