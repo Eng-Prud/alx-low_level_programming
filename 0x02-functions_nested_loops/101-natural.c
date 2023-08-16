@@ -8,11 +8,10 @@
 
 int main(void)
 {
-	int limit = 1024;
 	int sum;
 	int n;
 
-	for (n = 1; n < limit; n++)
+	for (n = 1; n < 1024; n++)
 	{
 		if ((n % 3 == 0) || (n % 5 == 0))
 		{
