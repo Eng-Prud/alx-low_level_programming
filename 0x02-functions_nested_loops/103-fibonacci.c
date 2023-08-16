@@ -12,7 +12,7 @@ int main(void)
 	int i = 0;
 	long previous = 1;
 	long current = 2;
-	long sum = current;
+	long sum = 2;
 
 	while (current + previous < 4000000)
 	{
