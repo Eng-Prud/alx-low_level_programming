@@ -12,7 +12,6 @@ int main(void)
 	int i = 0;
 	long previous = 1;
 	long current = 2;
-	long next;
 	long sum = current;
 
 	while (current + previous < 4000000)
