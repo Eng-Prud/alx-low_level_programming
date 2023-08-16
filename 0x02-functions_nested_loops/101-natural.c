@@ -14,11 +14,9 @@ int main(void)
 
 	for (n = 1; n < limit; n++)
 	{
-		int i;
-
-		if (i % 3 == 0 || i % 5 == 0)
+		if ((n % 3 == 0) || (n % 5 == 0))
 		{
-			sum += i;
+			sum += n;
 		}
 	}
 	printf("Sum of multiples of 3 and 5: %d\n", sum);
