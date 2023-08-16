@@ -16,7 +16,7 @@ int main(void)
 		if (z == 0)
 			printf("%ld, ", a);
 		else if (z == 1)
-			printf(" %ld", b);
+			printf("%ld", b);
 		else
 		{
 			b += a;
