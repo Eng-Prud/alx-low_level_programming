@@ -14,9 +14,9 @@ int main(void)
 	while (z < 50)
 	{
 		if (z == 0)
-			printf("%ld,", a);
+			printf("%ld, ", a);
 		else if (z == 1)
-			printf("%ld", b);
+			printf(" %ld", b);
 		else
 		{
 			b += a;
