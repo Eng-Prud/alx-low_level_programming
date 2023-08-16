@@ -19,6 +19,6 @@ int main(void)
 			sum += n;
 		}
 	}
-	printf("Sum of multiples of 3 and 5: %d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
