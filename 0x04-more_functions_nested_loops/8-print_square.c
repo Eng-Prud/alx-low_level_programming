@@ -4,6 +4,7 @@
  * print_square - function that prints a square, followed by a new line
  * _putchar - prints
  * @# - character used to print the square
+ * size: size of the aquare
  */
 
 void print_square(int size)
