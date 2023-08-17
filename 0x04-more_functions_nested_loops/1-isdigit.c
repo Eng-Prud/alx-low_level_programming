@@ -1,8 +1,15 @@
-#include "main"
+#include "main.h"
 
-int _isupper(int c)
+/**
+ *_isdigit - Checks for a digit from 0 through 9
+ *@c: Digit entered
+ *
+ * Return: 1 if c is a digit and 0 if otherwise
+ */
+
+int _isdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 0 && c <= 9)
 	{
 		return (1);
 	}
@@ -11,3 +18,5 @@ int _isupper(int c)
 		return (0);
 	}
 }
+
+
