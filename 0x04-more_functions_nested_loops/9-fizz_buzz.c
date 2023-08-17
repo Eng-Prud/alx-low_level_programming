@@ -4,7 +4,7 @@
  * main - Entry point
  * printf - outputs digits from 0 to 100
  *
- * Return: 0 Always (SUCCESS)
+ * Return: Always 0 (SUCCESS)
  */
 
 int main(void)
