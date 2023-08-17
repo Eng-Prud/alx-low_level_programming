@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry Level
- * printf - outputs
+ * main - Entry point
+ * printf - outputs digits from 0 to 100
  *
  * Return: 0 Always (SUCCESS)
  */
