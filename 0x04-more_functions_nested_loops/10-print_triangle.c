@@ -4,6 +4,7 @@
  * print_triangle - function that prints a triangle
  * _putchar - outputs the triangle
  * @size: Determines size of triangle
+ *
  */
 
 void print_triangle(int size)
@@ -19,7 +20,7 @@ void print_triangle(int size)
 
 	for (i = 1; i <= size; i++)
 	{
-		for (j = 0; j < size - 1; j++)
+		for (j = 0; j < size - i; j++)
 		{
 			_putchar(' ');
 		}
