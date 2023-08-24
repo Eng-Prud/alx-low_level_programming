@@ -3,6 +3,7 @@
 /**
  *print_number -  function that prints an integer
  *@n: integer to be printed
+ *Return: returns 0
  */
 
 void print_number(int n)
