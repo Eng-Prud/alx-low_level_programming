@@ -1,37 +1,31 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
- *int _strspn - Gets length of prefix substring
- *s: String to search
- *@acccept: String containig acceptable bytes
- * 
- * Return: No of bytes in initial segment of s
+ *_strstr - Locates a substring
+ *@haystack: String to search in
+ *@needle: The substring to search for
+ *
+ * Return: A pointer to the beginning of the located substring,
+ * or NULL if the substring is not found
  */
 
-
-unsigned int _strspn(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int lenth = 0;
-	int found = 0;
-	int i;
-
-	while (*s)
+	while (*haystack)
 	{
-		for (i = 0; accept[i]; i++)
+		char *start = haystack;
+		char *substr = needle;
+
+		while (*haystack  && *substr && (*haystack == *substr))
 		{
-			if (*s == accept[i])
-			{
-				length++;
-				found = i;
-				break;
-			}
+			haystack++;
+			substr++;
 		}
 
-		if (!found)
-			break;
-
-		s++;
+		if (*substr == '\0')
+			return (start);
+		haystack = start + 1;
 	}
-
-	return (length);
+	return (NULL);
 }
