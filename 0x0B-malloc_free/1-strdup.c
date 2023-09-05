@@ -1,37 +1,40 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
 
 /**
- * create_array - function that creates an array of chars,
- * and initializes it with a specific char
- * @c: char
- * @size: size of array
- * Return: pointer to the array or NULL
+ * _strdup - returns a pointer to a new string which is a
+ * duplicate of the string str
+ * @str: string to be duplicated
+ * Return: NULL if str = NULL
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
+	char *dup;
+	int len = 0;
 	int p;
 
-	if (size == 0)
+	if  (str == NULL)
 	{
 		return (NULL);
 	}
 
-	char *array = (char *)malloc(size + 1);
+	while (str[len])
+	{
+		len++;
+	}
 
-	if (array == NULL)
+	dup = (char *)malloc((len + 1) * sizeof(char));
+
+	if (dup == NULL)
 	{
 		return (NULL);
 	}
 
-	for (p = 0; p < size; p++)
+	for (p = 0; p < len; p++)
 	{
-		array[p] = c;
+		dup[p] = str[p];
 	}
 
-	array[size] = '\0';
-
-	return (array);
-
+	return (dup);
 }
