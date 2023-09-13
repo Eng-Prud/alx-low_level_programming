@@ -15,7 +15,7 @@ op_t ops[] = {
 /**
  * get_op_func - Function that selects correct operation
  * @s: opperator
- * @Return: Return ptr to function
+ * Return: NULL
  */
 int (*get_op_func(char *s))(int, int)
 {
