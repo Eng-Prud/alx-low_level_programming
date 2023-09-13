@@ -2,7 +2,13 @@
 #include <string.h>
 #include <stddef.h>
 
-
+/**
+ * get_op_func - Function that selects correct operation
+ * @s: opperator
+ * Return: NULL
+ */
+int (*get_op_func(char *s))(int, int)
+{
 op_t ops[] = {
 	{"+", op_add},
 	{"-", op_sub},
@@ -11,14 +17,6 @@ op_t ops[] = {
 	{"%", op_mod},
 	{NULL, NULL}
 };
-
-/**
- * get_op_func - Function that selects correct operation
- * @s: opperator
- * Return: NULL
- */
-int (*get_op_func(char *s))(int, int)
-{
 	int i = 0;
 
 	while (ops[i].op != NULL)

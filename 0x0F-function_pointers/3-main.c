@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	operator = argv[2];
 	num2 = atoi(argv[3]);
-
 	operation = get_op_func(operator);
 
 	if (operation == NULL)
@@ -42,6 +41,5 @@ int main(int argc, char *argv[])
 	}
 	calc = operation(num1, num2);
 	printf("%d\n", calc);
-
 	return (0);
 }
