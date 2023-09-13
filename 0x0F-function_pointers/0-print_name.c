@@ -8,7 +8,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL &7 f != NULL)
+	if (name != NULL && f != NULL)
 	{
 		f(name);
 	}
