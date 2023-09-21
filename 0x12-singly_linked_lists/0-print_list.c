@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stddef.h>
 
 /**
  * print_list - Function toprint all elements of a list
