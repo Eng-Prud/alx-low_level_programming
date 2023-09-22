@@ -1,6 +1,5 @@
+#include "lists.h"
 #include <stdio.h>
-
-void print_before_main(void) __attribute__((constructor));
 
 /**
  * print_before_main - Print before main
@@ -18,6 +17,7 @@ void print_before_main(void)
 
 int main(void)
 {
+	print_before_main();
 	printf("(A tortoise, having pretty good sense of a hare's nature, ");
 	printf("challenges one to a race.)\n");
 
