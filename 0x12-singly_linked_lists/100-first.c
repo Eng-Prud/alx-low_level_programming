@@ -1,80 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "lists.h"
+
+void print_before_main(void) __attribute__((constructor));
 
 /**
- * print_before_main - Function to print text before main
- * @head: pointer to the head of the list
- * @str: string to add to the new node
- * Return: Pointer to new node
+ * print_before_main - Print before main
  */
-
-list_t *print_before_main(list_t **head, const char *str)
+void print_before_main(void)
 {
-	list_t *new;
-
-	if (!str)
-	{
-		return (NULL);
-	}
-	new = malloc(sizeof(list_t));
-
-	if (!new)
-	{
-		return (NULL);
-	}
-	new->str = strdup(str);
-	if (!new->str)
-	{
-		free(new);
-		return (NULL);
-	}
-
-	new->next = *head;
-	*head = new;
-
-	return (new);
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
 
 /**
- * print_list - Prints elements
- *@h: ptr to head of list
- *Return: No of nodes in list
- */
-
-size_t print_list(const list_t *h)
-{
-	size_t node_count = 0;
-
-	while (h)
-	{
-		if (!h->str)
-			printf("[0] (nil)\n");
-		else
-			printf("[%u] %s\n", h->str ? h->len : 0, h->str ? h->str : "(nil)");
-		h = h->next;
-		node_count++;
-	}
-
-	return (node_count);
-}
-
-/**
- * main - Entrypoint
+ * main - Entry point
  * Return: 0 SUCCESS
  */
 
 int main(void)
 {
-	list_t *head = NULL;
-
-	print_before_main(&head, "You're beat! and yet, you must allow,\n");
-	print_before_main(&head, "I bore my house upon my back!\n");
-
 	printf("(A tortoise, having pretty good sense of a hare's nature, ");
 	printf("challenges one to a race.)\n");
-
-	print_list(head);
 
 	return (0);
 }
