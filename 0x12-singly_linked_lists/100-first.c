@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -28,7 +30,6 @@ list_t *print_before_main(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new->len = strlen(str);
 	new->next = *head;
 	*head = new;
 
@@ -65,8 +66,15 @@ size_t print_list(const list_t *h)
 
 int main(void)
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
+	list_t *head = NULL;
+
+	print_before_main(&head, "You're beat! and yet, you must allow,\n");
+	print_before_main(&head, "I bore my house upon my back!\n");
+
+	printf("(A tortoise, having pretty good sense of a hare's nature, ");
+	printf("challenges one to a race.)\n");
+
+	print_list(head);
 
 	return (0);
 }
