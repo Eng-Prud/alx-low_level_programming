@@ -5,6 +5,7 @@
  * need to flip to get from one number to another
  * @n: first unsigned int
  * @m: second int
+ * Return: count
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
@@ -17,6 +18,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		count += result & 1;
 		result >>= 1;
 	}
-
 	return (count);
 }
