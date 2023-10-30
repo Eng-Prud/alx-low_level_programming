@@ -31,16 +31,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
 	ssize_t bytesRead = fread(buffer, 1, letters, file);
+
 	if (bytesRead == -1)
 	{
 		free(buffer);
 		fclose(file);
 		return (0);
 	}
-
 	ssize_t bytesWritten = write(STDOUT_FILENO, buffer, bytesRead);
+
 	if (bytesWritten == -1)
 	{
 		free(buffer);
