@@ -3,7 +3,10 @@
 /**
   * binary_search - Searches for a value in a sorted array
   *                 of integers using binary search.
-
+  * @array: pointer to the first element of the array to search in
+  * @size: No of elements
+  * @value: Value to search for
+  * Return: if array is NULL, it returns -1
   * Description: Prints the [sub]array being searched after each change.
   */
 int binary_search(int *array, size_t size, int value)
