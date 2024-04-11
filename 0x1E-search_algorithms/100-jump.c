@@ -3,7 +3,10 @@
 /**
   * jump_search - Searches for a value in a sorted array
   *               of integers using jump search.
-		  Uses the square root of the array size as the jump step.
+  * @array:  pointer to the first element of the array to search in
+  * @size: No of elements
+  * @value: value to search for
+  * Return: If array is NULL, function will return -1
   */
 int jump_search(int *array, size_t size, int value)
 {
